@@ -2,5 +2,4 @@
 
 def multiple_returns(sentence):
 
-    len_sentence = len(sentence)
-    return len_sentence, sentence[0]
+    return len(sentence), sentence[0]
