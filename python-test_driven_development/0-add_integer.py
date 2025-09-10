@@ -4,6 +4,7 @@ Module 0-add_integer
 contain fonction add_integer add two integer.
 """
 
+
 def add_integer(a, b=98):
     """
     add two integer or float.
@@ -13,7 +14,7 @@ def add_integer(a, b=98):
         b (int ou float, optionnel): second number by default (98)
 
     Returns:
-        int: sum of two number 
+        int: sum of two number
 
     Exceptions:
         TypeError: if a or b is not integer or gloat
