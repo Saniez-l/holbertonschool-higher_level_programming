@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """
 Module 0-add_integer
-contain fonction 
-add_integer add two integer.
+contain fonction add_integer add two integer.
 """
 
 
