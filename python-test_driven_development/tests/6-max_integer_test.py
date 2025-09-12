@@ -24,10 +24,6 @@ class TestMaxInteger(unittest.TestCase):
     def test_list_same_value(self):
         self.assertEqual(max_integer([7, 7, 7, 7]), 7)
 
-    def test_number(self):
-        with self.assertRaises(TypeError):
-            TestMaxInteger([1, "S", 3])
-
 
 if __name__ == '__main__':
     unittest.main()
