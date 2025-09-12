@@ -4,6 +4,7 @@
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
+
 class TestMaxInteger(unittest.TestCase):
     def test_positive_list(self):
         self.assertEqual(max_integer([1, 2, 3, 4, 5]), 5)
@@ -26,7 +27,6 @@ class TestMaxInteger(unittest.TestCase):
     def test_number(self):
         with self.assertRaises(TypeError):
             TestMaxInteger([1, "S", 3])
-
 
 
 if __name__ == '__main__':
