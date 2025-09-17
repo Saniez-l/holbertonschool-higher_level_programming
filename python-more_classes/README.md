@@ -1,5 +1,5 @@
 readme of project more class.
-The task of this project:
+The task of this project:<br/>
 0. Simple rectangle
 1. Real definition of a rectangle
 2. Area and Perimeter
