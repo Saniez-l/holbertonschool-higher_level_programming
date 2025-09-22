@@ -1,0 +1,28 @@
+Test the BaseGeometry class (7-base_geometry.py).
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+
+>>> # Test area() raises Exception
+>>> try:
+...     bg.area()
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[Exception] area() is not implemented
+
+>>> # Test integer_validator with a non-integer value
+>>> try:
+...     bg.integer_validator("height", "5")
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] height must be an integer
+
+>>> # Test integer_validator with a value <= 0
+>>> try:
+...     bg.integer_validator("width", -3)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[ValueError] width must be greater than 0
+
+>>> # Test integer_validator with a correct value (should not raise)
+>>> bg.integer_validator("size", 10)
