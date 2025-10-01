@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 Pickling Custom Classes
 """
@@ -53,5 +53,5 @@ class CustomObject:
                 data = pickle.load(f)
             return data
 
-        except (FileNotFoundError, pickle.UnpicklingError):
+        except (FileNotFoundError, pickle.UnpicklingError, EOFError):
             return None
