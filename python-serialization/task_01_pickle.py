@@ -15,11 +15,11 @@ class CustomObject:
         Init name, age, is_student
         """
         if not isinstance(name, str):
-            raise TypeError("Name is not string")
+            raise TypeError
         if not isinstance(age, int):
-            raise TypeError("age is not integer")
+            raise TypeError
         if not isinstance(is_student, bool):
-            raise TypeError("is_student is not boolean")
+            raise TypeError
 
         self.Name = name
         self.Age = age
