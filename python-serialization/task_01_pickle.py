@@ -29,8 +29,9 @@ class CustomObject:
         """
         Method to print out the object’s attributes with the following format
         """
-        for attr, value in self.__dict__.items():
-            print(f"{attr}: {value}")
+        print(f"Name: {self.Name}")
+        print(f"Age: {self.Age}")
+        print(f"Is Student: {self.Is_student}")
 
     def serialize(self, filename):
         """
