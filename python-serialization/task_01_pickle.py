@@ -15,11 +15,11 @@ class CustomObject:
         Init name, age, is_student
         """
         if not isinstance(name, str):
-            raise TypeError
+            raise TypeError("Name is not string")
         if not isinstance(age, int):
-            raise TypeError
+            raise TypeError("age is not integer")
         if not isinstance(is_student, bool):
-            raise TypeError
+            raise TypeError("is_student is not boolean")
 
         self.Name = name
         self.Age = age
@@ -37,10 +37,11 @@ class CustomObject:
         """
         Method to serialisation with pickle
         """
-        if filename is None:
+        try:
+            with open(filename, "wb") as f:
+                pickle.dump(self, f)
+        except Exception:
             return None
-        with open(filename, "wb") as f:
-            pickle.dump(self, f)
 
     @classmethod
     def deserialize(cls, filename):
