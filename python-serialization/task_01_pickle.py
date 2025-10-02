@@ -21,17 +21,17 @@ class CustomObject:
         if not isinstance(is_student, bool):
             raise TypeError("is_student is not boolean")
 
-        self.Name = name
-        self.Age = age
-        self.Is_student = is_student
+        self.name = name
+        self.age = age
+        self.is_student = is_student
 
     def display(self):
         """
         Method to print out the object’s attributes with the following format
         """
-        print(f"Name: {self.Name}")
-        print(f"Age: {self.Age}")
-        print(f"Is Student: {self.Is_student}")
+        print(f"Name: {self.name}")
+        print(f"Age: {self.age}")
+        print(f"Is Student: {self.is_student}")
 
     def serialize(self, filename):
         """
@@ -46,7 +46,7 @@ class CustomObject:
     @classmethod
     def deserialize(cls, filename):
         """
-        Method to deserialisation
+        Method to deserialization
         """
         try:
             with open(filename, "rb") as f:
