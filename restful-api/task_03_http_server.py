@@ -3,7 +3,7 @@
 Module for api server
 """
 
-from http.server import BaseHTTPRequestHandler
+from http.server import BaseHTTPRequestHandler, HTTPServer
 import socketserver
 import json
 
@@ -49,7 +49,8 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
 
 
 PORT = 8000
+server_adress = ("", PORT)
 
-with socketserver.TCPServer(("", PORT), SimpleHTTPRequestHandler) as httpd:
-    print("serving at port", PORT)
-    httpd.serve_forever()
+httpd = HTTPServer(server_adress, SimpleHTTPRequestHandler)
+print("serving at port", PORT)
+httpd.serve_forever()
