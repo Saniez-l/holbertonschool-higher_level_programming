@@ -43,6 +43,8 @@ def get_user(username):
     Return jsonify user
     """
     user = users.get(username)
+    if not user:
+        return jsonify({"error": "User not found"}), 404
     return jsonify(user)
 
 
@@ -53,12 +55,16 @@ def post():
     Return jsonify new user
     """
     data = request.get_json()
-    username = data.get("username")
+
+    if not data or "username" not in data:
+        return jsonify({"error": "Username is required"}), 400
+
+    username = data["username"]
     name = data.get("name")
     age = data.get("age")
     city = data.get("city")
 
-    users[username] = {"name": name, "age": age, "city": city}
+    users[username] = {"username": username,"name": name, "age": age, "city": city}
 
     return jsonify({"user add": users[username]})
 
