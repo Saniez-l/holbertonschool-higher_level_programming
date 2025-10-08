@@ -49,7 +49,7 @@ def get_user(username):
 
 
 @app.route("/add_user", methods=['POST'])
-def post():
+def add_user():
     """
     Def post for add new user
     Return jsonify new user
@@ -66,7 +66,7 @@ def post():
 
     users[username] = {"username": username,"name": name, "age": age, "city": city}
 
-    return jsonify({"user add": users[username]})
+    return jsonify({"message": "User added", "user": users[username]}), 201
 
 
 if __name__ == "__main__":
