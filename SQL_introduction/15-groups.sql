@@ -2,4 +2,4 @@
 SELECT score, COUNT(*) AS record_count
 FROM second_table
 GROUP BY score
-ORDER BY record_count DESC;
+ORDER BY number DESC;
