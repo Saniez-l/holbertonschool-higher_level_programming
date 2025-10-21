@@ -1,4 +1,6 @@
-The project SQL - More queries with this tasck<br/>
+The project SQL - More queries with this tasck
+
+
 0. My privileges!
 1. Root user
 2. Read user
