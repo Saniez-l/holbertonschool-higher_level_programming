@@ -21,7 +21,9 @@ if __name__ == "__main__":
     # BINARY pour forcer la sensibilité
     # a la case pour que le n ne soit pas pris en compte
     cursor.execute(
-        "SELECT * FROM states WHERE name LIKE BINARY '{}%' ORDER BY id ASC".format(sys.argv[4]))
+        "SELECT * FROM states WHERE name LIKE BINARY "
+        "'{}%' ORDER BY id ASC".format(sys.argv[4])
+    )
 
     rows = cursor.fetchall()
 
