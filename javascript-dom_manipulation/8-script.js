@@ -5,5 +5,5 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(response => response.json())
     .then(data => {
       helloElement.textContent = data.hello;
-    })
-})
+    });
+});
