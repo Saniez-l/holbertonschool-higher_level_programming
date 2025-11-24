@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Module that defines a type-annotated function to_str.
+Module that defines a type-annotated function to_str
 """
 
 

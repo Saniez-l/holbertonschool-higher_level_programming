@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Module that defines a type-annotated function add.
+Module that defines a type-annotated function add
 """
 
 

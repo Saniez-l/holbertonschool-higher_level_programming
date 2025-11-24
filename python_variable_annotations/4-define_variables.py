@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Module that defines annotated variables with specific values.
+Module that defines annotated variables with specific values
 """
 
 
